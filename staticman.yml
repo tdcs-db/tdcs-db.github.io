@@ -1,5 +1,4 @@
 # Staticman
-# year	authors	journal	title	Link	country	intensity (mA)	anode-region	cathode-region	duration	repetition/interval	electrode size (cm^2)	electrode type	current density	subjects	sample size	age	subject gender	other treatment	study type	effects-evaluation	effects	after-effects
 allowedFields: ['authors', 'year', 'journal', 'title', 'link', 'doi', 'country', 'method__intensity', 'method__anode_region','method__cathode_region', 'method__duration', 'method__repition', 'method__electrode_size', 'method__electrode_type', 'method__current_density', 'method__subjects', 'method__sample_size', 'method__subject_age', 'method__subject_gender', 'method__other_treatment', 'study_type', 'effects_evaluation', 'effects', 'after_effects', 'notes']
 branch: master
 commitMessage: "A New tDCS Research has been Added!"
