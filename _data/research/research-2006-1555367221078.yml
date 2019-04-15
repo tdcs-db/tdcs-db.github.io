@@ -1,0 +1,26 @@
+_id: 9674c440-5fcd-11e9-bc8d-55566d7299f9
+authors: 'Fregni, Boggio, Nitsche, Marcolin, Rigonatti, Pascual-Leone'
+title: Treatment of major depression with transcranial direct current stimulation
+link: 'https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1399-5618.2006.00291.x'
+journal: Bipolar Disorder
+doi: 10.1111/j.1399-5618.2006.00291.x
+country: USA
+year: '2006'
+method__intensity: '1'
+method__duration: 20min/day
+method__repition: 5 sessions
+method__current_density: '0.02857142857'
+method__anode_region: left-DLPFC (F3)
+method__cathode_region: contralateral supraorbital area
+method__electrode_size: '35'
+method__electrode_type: salien-soaked sponge
+method__subjects: MDD
+method__sample_size: '10'
+method__subject_age: 42.7+/-10
+method__subject_gender: not indicated
+method__other_treatment: ''
+study_type: double-blind
+effects_evaluation: HAM and BDI
+effects: 60% changes in HAM and BDI scores
+after_effects: ''
+notes: ''
