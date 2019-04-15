@@ -28,3 +28,5 @@ author:
 
 # Build settings
 markdown: kramdown
+
+staticman: https://dev.staticman.net/v3/entry/github/tdcs-db/tdcs-db.github.io/master/research
