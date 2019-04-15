@@ -8,7 +8,7 @@ country: USA
 year: '2006'
 method__intensity: '1'
 method__duration: 20min/day
-method__repition: 5 sessions
+method__repetition: 5 sessions
 method__current_density: '0.02857142857'
 method__anode_region: left-DLPFC (F3)
 method__cathode_region: contralateral supraorbital area

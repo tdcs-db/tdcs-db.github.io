@@ -1,13 +1,26 @@
-_id: 790df940-2df0-11e8-a67d-bb93e6150b56
-author: 
-email: orien@botsally.com
-name: 机器人联盟公司-BotsAlly Company
-founded: '2017'
-base: 火星南河城
-category: 信息助理机器人
-link: www.botsally.com
-about: >-
-  机器人联盟是本识科技在火星的子公司，由地球人的信息交互助理发展起来，逐渐扩张到其它领域，后与波斯顿动力在火星的子公司合并，旗下的飞船自动驾驶机器人（分布式软件人工智能体）、火星采矿机器人、布防机器人、火星种植收割机器人占据火星20%以上的市场份额。
-date: '2018-03-22T16:45:48.539Z'
-layout: post
-message: ' '
+_id: 9674c440-5fcd-11e9-bc8d-55566d7299f9
+authors: 'Fregni, Boggio, Nitsche, Marcolin, Rigonatti, Pascual-Leone'
+title: Treatment of major depression with transcranial direct current stimulation
+link: 'https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1399-5618.2006.00291.x'
+journal: Bipolar Disorder
+doi: 10.1111/j.1399-5618.2006.00291.x
+country: USA
+year: '2006'
+method__intensity: '1'
+method__duration: 20min/day
+method__repetition: 5 sessions
+method__current_density: '0.02857142857'
+method__anode_region: left-DLPFC (F3)
+method__cathode_region: contralateral supraorbital area
+method__electrode_size: '35'
+method__electrode_type: salien-soaked sponge
+method__subjects: MDD
+method__sample_size: '10'
+method__subject_age: 42.7+/-10
+method__subject_gender: not indicated
+method__other_treatment: ''
+study_type: double-blind
+effects_evaluation: HAM and BDI
+effects: 60% changes in HAM and BDI scores
+after_effects: ''
+notes: ''

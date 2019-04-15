@@ -1,100 +1,195 @@
 
 
-   {% assign companiesraw = (site.data.research | sort ) | reverse %}
+   {% assign researchesraw = (site.data.research | sort ) | reverse %}
    <!-- {% assign totalcompanies = ( companiesraw | size) %}
    {{ totalcompanies }} -->
    <!-- {{ companies = companiesraw | slice: 1, 2 }} -->
    <!-- {% assign flag = 0 %} -->
-   {% assign companies = companiesraw limit: 3 %}
-   {% for company in companies limit: 1 %}
+   {% assign researches = researchesraw limit: 3 %}
+   {% for research in researches limit: 1 %}
    <!-- {% if flag < 2 %} -->
    <!-- {% assign flag = flag + 1 %} -->
-   {% assign companyitem = company %}
+   {% assign researchitem = research %}
+
+
+<div id="{{ research[0] | slugify }}-full" class="mix col-sm-6 wow fadeIn" data-wow-delay="0.4s"
+  data-founded-date="{{ researchitem.title }}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="#{{ research[0] | slugify }}-full" style="float:right;">
+        <span style="line-height: 30px;padding-left:0.5em;"><i class="fa fa-link"></i></span></a>
+
+      <h3 class="panel-title">{{ researchitem.title }}</h3>
+
+    </div>
+
+    <div class="panel-body">
+      <ul id="{{ research[0] | slugify }}" class="nav nav-tabs nav-justified">
+        <li class="active"><a href="#{{ research[0] | slugify }}-basics" data-toggle="tab"><i class="fa fa-info-circle"
+              aria-hidden="true"></i></a></li>
+        <li class=""><a href="#{{ research[0] | slugify }}-method" data-toggle="tab"><i class="fa fa-cogs"
+              aria-hidden="true"></i></a></li>
+        <li class=""><a href="#{{ research[0] | slugify }}-notes" data-toggle="tab"><i class="fa fa-file-text"
+              aria-hidden="true"></i></a></li>
+      </ul>
+      <div id="{{ research[0] | slugify }}-Content" class="tab-content">
+        <div class="tab-pane active in" id="{{ research[0] | slugify }}-basics">
+
+          <ul class="list-group" style="font-size:90%;">
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Authors</h4>
+              <p class="list-group-item-text">{{ researchitem.authors }}</p>
+            </li>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Journal</h4>
+              <p class="list-group-item-text"> <a href="{{ researchitem.link }}" target="blank">
+                  {{ researchitem.journal }}</a>
+              </p>
+            </li>
+
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Country</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.country }}
+              </p>
+            </li>
+
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Year</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.year }}
+              </p>
+            </li>
+
+            {% if researchitem.added_by == null %}
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Added by</h4>
+              <p class="list-group-item-text"><i class="fa fa-user-secret" aria-hidden="true"></i></p>
+            </li>
+            {% elsif researchitem.added_by == '' %}
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Added by</h4>
+              <p class="list-group-item-text"><i class="fa fa-user-secret" aria-hidden="true"></i></p>
+            </li>
+            {% else %}
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Added by</h4>
+              <p class="list-group-item-text">{{ researchitem.added_by }}</p>
+            </li>
+            {% endif %}
+
+          </ul>
+
+
+        </div>
 
 
 
-   <div class="mix col-sm-6 wow fadeIn" data-wow-delay="0.4s" data-founded-date="{{ companyitem.founded }}">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3 class="panel-title" style="text-align:center;font-weight:bold;">
-   {{ companyitem.name }}</h3>
-         </div>
+        <div class="tab-pane" id="{{ research[0] | slugify }}-method">
 
-         <div class="panel-body">
-            <ul id="{{ company[0] | slugify }}" class="nav nav-tabs nav-justified">
-               <li class="active"><a href="#{{ company[0] | slugify }}-basics" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
-               <li class=""><a href="#{{ company[0] | slugify }}-about" data-toggle="tab"><i class="fa fa-file-text" aria-hidden="true"></i></a></li>
-            </ul>
-            <div id="{{ company[0] | slugify }}-Content" class="tab-content">
-               <div class="tab-pane fade active in" id="{{ company[0] | slugify }}-basics">
+          <ul class="list-group" style="font-size:90%;">
 
-                  <ul class="list-group" style="font-size:90%;">
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">成立年份</h4>
-                        <p class="list-group-item-text">{{ companyitem.founded }}</p>
-                     </li>
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">公司基地</h4>
-                        <p class="list-group-item-text">{% for base in companyitem.base %} {{ base }}<br> {% endfor %}
-                        </p>
-                     </li>
 
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">公司类型</h4>
-                        <p class="list-group-item-text">
-                           {% for category in companyitem.category %} {{ category }} <br> {% endfor %}
-                        </p>
-                     </li>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Intensity</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__intensity }} mA
+              </p>
+            </li>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Duration</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__duration }}
+              </p>
+            </li>
+                        <li class="list-group-item">
+              <h4 class="list-group-item-heading">Repetition</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__repetition }}
+              </p>
+            </li>
+          <li class="list-group-item">
+              <h4 class="list-group-item-heading">Anode Region</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__anode_region }}
+              </p>
+            </li>
 
-                     {% if companyitem.link == null %}
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">网站</h4>
-                        <p class="list-group-item-text" style="overflow:hidden;text-overflow: ellipsis;line-height: 1em;">
-                           未提供
-                        </p>
-                     </li>
-                     {% elsif companyitem.link == '' %}
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">网站</h4>
-                        <p class="list-group-item-text" style="overflow:hidden;text-overflow: ellipsis;">
-                           未提供
-                        </p>
-                     </li>
-                     {% else %}
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">网站</h4>
-                        <p class="list-group-item-text" style="overflow:hidden;text-overflow: ellipsis;">
-                           {{ companyitem.link }}
-                        </p>
-                     </li>
-                     {% endif %} {% if companyitem.author == null %}
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">添加</h4>
-                        <p class="list-group-item-text">保密</p>
-                     </li>
-                     {% elsif companyitem.author == '' %}
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">添加</h4>
-                        <p class="list-group-item-text">保密</p>
-                     </li>
-                     {% else %}
-                     <li class="list-group-item">
-                        <h4 class="list-group-item-heading">添加</h4>
-                        <p class="list-group-item-text">{{ companyitem.author }}</p>
-                     </li>
-                     {% endif %}
+ <li class="list-group-item">
+              <h4 class="list-group-item-heading">Cathode Region</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__cathode_region }}
+              </p>
+            </li>
+             <li class="list-group-item">
+              <h4 class="list-group-item-heading">Electrode Size</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__electrode_size }} cm<sup>2</sup>
+              </p>
+            </li>
+             <li class="list-group-item">
+              <h4 class="list-group-item-heading">Electrode Type</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__electrode_type }}
+              </p>
+            </li>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Subjects</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__subjects }} 
+              </p>
+            </li>
 
-                  </ul>
-               </div>
+             <li class="list-group-item">
+              <h4 class="list-group-item-heading">Sample Size</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__sample_size }}
+              </p>
+            </li>
 
-               <div class="tab-pane fade" id="{{ company[0] | slugify }}-about">
-                  <p markdown="1">{{ companyitem.about | markdownify }}</p>
-               </div>
-            </div>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Subject Age</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__subject_age }} 
+              </p>
+            </li>
 
-         </div>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Subject Gender</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__subject_gender }} 
+              </p>
+            </li>
+
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Subject Other Treatment</h4>
+              <p class="list-group-item-text">
+                {{ researchitem.method__other_treatment }} 
+              </p>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+
+        <div class="tab-pane" id="{{ research[0] | slugify }}-notes">
+
+          <p markdown="1">{{ researchitem.about | markdownify }}</p>
+
+        </div>
+
+
       </div>
-   </div>
+
+    </div>
+  </div>
+
+
+
+</div>
 
       <!-- {% endif %} -->
       {% endfor %}
