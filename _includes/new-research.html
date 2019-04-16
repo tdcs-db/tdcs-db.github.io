@@ -5,9 +5,10 @@
     <input name="options[redirect]" type="hidden" value="https://github.com/tdcs-db/tdcs-db.github.io/pulls">
     <div class="row">
       <fieldset class="form-group col-sm-12">
+      <label for="research-form[authors]">authors of the research (required)</label>
         <input class="form-control" type="text" id="research-form[authors]" name="fields[authors]"
-          placeholder="authors of the research" data-toggle="tooltip" data-placement="left" title=""
-          data-original-title="[seperated by comma (required)]" required />
+          placeholder="" data-toggle="tooltip" data-placement="left" title=""
+          data-original-title="seperated by comma (required)" required />
 
       </fieldset>
 
@@ -18,29 +19,30 @@
 
     <fieldset class="form-group row">
       <div class="col-sm-12">
+      <label for="research-form[title]">title of the research (required)</label>
         <input class="form-control" type="text" id="research-form[title]" name="fields[title]"
-          placeholder="[title of the research (required)]" required />
-
+          placeholder="" required />
       </div>
     </fieldset>
     <fieldset class="form-group row">
       <div class="col-sm-12">
+      <label for="research-form[link]">link of the research (required)</label>
         <input class="form-control" type="text" id="research-form[link]" name="fields[link]"
-          placeholder="[link of the research (required)]" required />
+          placeholder="" required />
       </div>
     </fieldset>
 
     <div class="row">
       <fieldset class="form-group col-sm-8">
-
+        <label for="research-form[journal]">journal where the research was published (required)</label>
         <input class="form-control" type="text" id="research-form[journal]" name="fields[journal]"
-          placeholder="[journal where the research was published (required)]" required />
+          placeholder="" required />
 
       </fieldset>
 
       <fieldset class="form-group col-sm-4">
-
-        <input class="form-control" type="text" id="research-form[doi]" name="fields[doi]" placeholder="[DOI (required)]"
+        <label for="research-form[doi]">DOI (required)</label>
+        <input class="form-control" type="text" id="research-form[doi]" name="fields[doi]" placeholder=""
           required />
 
       </fieldset>
@@ -49,117 +51,137 @@
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+        <label for="research-form[country]">country of the research (required)</label>
         <input class="form-control" type="text" id="research-form[country]" name="fields[country]"
-          placeholder="[country of the research ]" required />
+          placeholder="" required />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[year]">year of research (required)</label>
         <input class="form-control" type="number" id="research-form[year]" name="fields[year]"
-          placeholder="[year of research (required)]" required />
+          placeholder="" required />
       </fieldset>
     </div>
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__intensity]">method: intensity of the stimulaion (mA)</label>
         <input class="form-control" type="number" id="research-form[method__intensity]" name="fields[method__intensity]"
-          placeholder="[method: intensity of the stimulaion]" />
+          placeholder="" />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__duration]">method: duration of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__duration]" name="fields[method__duration]"
-          placeholder="[method: duration of the stimulaion]" />
+          placeholder="" />
       </fieldset>
     </div>
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+        <label for="research-form[method__repetition]">method: repetition of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__repetition]" name="fields[method__repetition]"
-          placeholder="[method: repetition of the stimulaion]" />
+          placeholder="" />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+        <label for="research-form[method__current_density]">method: current density of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__current_density]" name="fields[method__current_density]"
-          placeholder="[method: current density of the stimulaion]" />
+          placeholder="" />
       </fieldset>
     </div>
 
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__anode_region]">anode location of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__anode_region]" name="fields[method__anode_region]"
-          placeholder="[anode location of the stimulaion]" />
+          placeholder="" />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__cathode_region]">method: cathode location of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__cathode_region]" name="fields[method__cathode_region]"
-          placeholder="[method: cathode location of the stimulaion]" />
+          placeholder="" />
       </fieldset>
     </div>
 
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__electrode_size]">electrode size (in cm^2)</label>
         <input class="form-control" type="number" id="research-form[method__electrode_size]" name="fields[method__electrode_size]"
-          placeholder="[electrode size (in cm^2)]" />
+          placeholder="" />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__electrode_type]">electrode type</label>
         <input class="form-control" type="text" id="research-form[method__electrode_type]" name="fields[method__electrode_type]"
-          placeholder="[electrode type]" />
+          placeholder="" />
       </fieldset>
     </div>
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__subjects]">subjects group of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__subjects]" name="fields[method__subjects]"
-          placeholder="[subjects group of the stimulaion]" />
+          placeholder="" />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__sample_size]">sample size of the stimulaion</label>
         <input class="form-control" type="number" id="research-form[method__sample_size]" name="fields[method__sample_size]"
-          placeholder="[sample size of the stimulaion]" />
+          placeholder="" />
       </fieldset>
     </div>
 
     <div class="row">
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__subject_age]">subject age group of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__subject_age]" name="fields[method__subject_age]"
-          placeholder="[subject age group of the stimulaion]" />
+          placeholder="" />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__subject_gender]">subject gender of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__subject_gender]" name="fields[method__subject_gender]"
-          placeholder="[subject gender of the stimulaion]"  />
+          placeholder=""  />
       </fieldset>
     </div>
 
      <div class="row">
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[method__other_treatment]">other treatment group of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[method__other_treatment]" name="fields[method__other_treatment]"
-          placeholder="[other treatment group of the stimulaion]"  />
+          placeholder=""  />
       </fieldset>
       <fieldset class="form-group col-sm-6">
+      <label for="research-form[study_type]">study type (double blind?) of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[study_type]" name="fields[study_type]"
-          placeholder="[study type (double blind?) of the stimulaion]"  />
+          placeholder=""  />
       </fieldset>
     </div>
     
 
     <div class="row">
       <fieldset class="form-group col-sm-12">
+      <label for="research-form[effects_evaluation]">effects evaluation of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[effects_evaluation]" name="fields[effects_evaluation]"
-          placeholder="[effects evaluation of the stimulaion]"  />
+          placeholder=""  />
       </fieldset>
     </div>
     <div class="row">
       <fieldset class="form-group col-sm-12">
+      <label for="research-form[effects]">effects of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[effects]" name="fields[effects]"
-          placeholder="[effects of the stimulaion]"  />
+          placeholder=""  />
       </fieldset>
     </div>
 
     <div class="row">
       <fieldset class="form-group col-sm-12">
+      <label for="research-form[after_effects]">after effects of the stimulaion</label>
         <input class="form-control" type="text" id="research-form[after_effects]" name="fields[after_effects]"
-          placeholder="[after effects of the stimulaion]"  />
+          placeholder=""  />
       </fieldset>
     </div>
 
     <fieldset class="form-group row">
       <div class="col-sm-12">
+      <label for="research-form[notes]">notes</label>
         <textarea class="form-control researchabouttextarea" name="fields[notes]" type="text" maxlength="300" rows="10"
           id="research-form[notes]"
           placeholder="[some notes about the research]"

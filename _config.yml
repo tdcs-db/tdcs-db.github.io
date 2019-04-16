@@ -25,6 +25,7 @@ subscribe:
 author:
   name: tDCS-DB
 
+github_link: https://github.com/tdcs-db/tdcs-db.github.io
 
 # Build settings
 markdown: kramdown
