@@ -1,0 +1,43 @@
+---
+limit: 10000
+---
+
+
+[{% for research in site.data.research limit: page.limit %}
+{% assign researchitem = research[1] %}
+    {
+      "file": "{{ research[0] }}",
+      "title": "{{ researchitem.title }}",
+      "journal": "{{ researchitem.journal }}",
+      "doi": "{{ researchitem.doi }}",
+      "url": "{{ researchitem.link }}",
+      "authors": "{{ researchitem.authors }}",
+      "year": "{{ researchitem.year }}",
+      "country": "{{ researchitem.country }}",
+      "method": {
+        "intensity": "{{ researchitem.method__itensity }}",
+        "anode_region": "{{ researchitem.method__anode_region }}","cathode_region": "{{ researchitem.method__cathode_region }}",
+        "duration": "{{ researchitem.method__duration }}",
+        "repetition": "{{ researchitem.method__repetition }}",
+        "electrode_size": "{{ researchitem.method__electrode_size }}",
+        "electrode_type": "{{ researchitem.method__electrode_type }}",
+        "current_density": "{{ researchitem.method__current_density }}",
+        "subjects": "{{ researchitem.method__subjects }}",
+        "sample_size": "{{ researchitem.method__sample_size }}",
+
+        "subject_age": "{{ researchitem.method__subject_age }}",
+
+        "subject_gender": "{{ researchitem.method__subject_gender }}",
+        "other_treatment": "{{ researchitem.method__other_treatment }}",
+        "study_type": "{{ researchitem.study_type }}"
+      },
+      "results": {
+        "effects_evaluation": "{{ researchitem.effects_evaluation }}",
+        "effects": "{{ researchitem.effects }}",
+        "after_effects": "{{ researchitem.after_effects }}"
+      },
+      "notes": "{{ researchitem.notes }}",
+      "added_by": "{{ researchitem.added_by }}"
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
