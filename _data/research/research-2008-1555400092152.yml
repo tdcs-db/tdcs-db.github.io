@@ -1,0 +1,29 @@
+_id: 1f1e0cb0-601a-11e9-b470-ddc72d5fa5d8
+authors: 'Boggio, Rigonatti, Ribeiro, Myczkowski, Nitsche, Pascual-Leone, Fregni'
+title: >-
+  A randomized, double-blind clinical trial on the efficacy of cortical direct
+  current stimulation for the treatment of major depression
+link: 'https://www.ncbi.nlm.nih.gov/pubmed/17559710'
+journal: International Journal of Neuropsychopharmacology
+doi: 10.1017/S1461145707007833
+country: Brazil
+year: '2008'
+method__intensity: '2'
+method__duration: 20min/day
+method__repetition: 10 sessions
+method__current_density: ''
+method__anode_region: left-DLPFC(F3)
+method__cathode_region: contralateral supraorbital area
+method__electrode_size: '35'
+method__electrode_type: salien-soaked sponge
+method__subjects: MDD
+method__sample_size: '40'
+method__subject_age: 49.4+/-7.4
+method__subject_gender: 28 female
+method__other_treatment: 'active sham: occipital; sham: left-DLPFC'
+study_type: double blind
+effects_evaluation: 'HDRS, BDI'
+effects: reduction in BDI and HDRS
+after_effects: 1 month
+notes: ''
+added_by: ''
